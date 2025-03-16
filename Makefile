@@ -1,17 +1,20 @@
 CC=gcc
+CFLAGS=-Wall
 
-%.o: *.c
+%.o: src/*.c
 	@echo "== Compiling object files =="
-	$(CC) $^ -c
+	$(CC) $(CFLAGS) -c -I include/ $^
+	@mkdir -p build
+	@mv *.o build/
 	@echo -e "== Compiling done ==\n"
 
-interpreter-bytecode.out: *.o
+interpreter-bytecode.out: build/*.o
 	@echo "== Linking comiled files =="
-	$(CC) -o $@ $^
+	$(CC) $(CFLAGS) -o build/$@ $^
 	@echo -e "== Linking done =="
 
 run:
-	@./interpreter-bytecode.out
+	@./build/interpreter-bytecode.out
 
 clean:
-	rm *.o *.out
+	rm build/**
