@@ -2,10 +2,6 @@
 #include "include/common.h"
 #include "include/debug.h"
 
-#include "chunk.c"
-#include "debug.c"
-#include "memory.c"
-
 int main(int argc, char **argv) {
   Chunk chunk;
   initChunk(&chunk);
