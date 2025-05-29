@@ -22,6 +22,14 @@ make run
             - Can use more bytes per OP or
             - Make a new OP that uses like the next 3 bytes to store the constants
         - [ ] Write your own memory managment without using the realloc, malloc, and free
+- Chapter 15
+    - Virtual Machine
+        - Runs op_codes according to ... codes
+    - Stack for value manupilation(arithmatic +-/\*)
+    - [ ] Challenges
+        - [ ] Remove either OP_NEGATE or OP_SUBTRACT
+        - [ ] Fix stack overflow in VM
+        - [ ] OP_NEGATE without poping in place itself and check the performance changes
 
 ## Testing
 > Coming soon
