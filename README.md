@@ -30,6 +30,13 @@ make run
         - [ ] Remove either OP_NEGATE or OP_SUBTRACT
         - [ ] Fix stack overflow in VM
         - [ ] OP_NEGATE without poping in place itself and check the performance changes
+- Chapter 16
+    - Scanner
+        - We don't convert values from string into for eg numbers or even string we just point to them inside the source so as to skip allocating memory to handle all of these
+    - [ ] Challenges
+        - [ ] String interpolation like "dfsdfds ${some code or expression}"
+        - [ ] How to overcome the >> like issue in C++ where >> colided with something like <vector<vector>>
+        - [ ] contextual keywords - for eg await is a keyword only in a async function
 
 ## Testing
 > Coming soon
