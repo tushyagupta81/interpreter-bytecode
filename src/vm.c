@@ -1,8 +1,8 @@
 #include "include/vm.h"
 #include "include/chunk.h"
 #include "include/common.h"
-#include "include/debug.h"
 #include "include/compiler.h"
+#include "include/debug.h"
 #include "include/value.h"
 #include <stdio.h>
 
@@ -17,11 +17,11 @@ void freeVM() {}
 static InterpretResult run() {
 #define READ_BYTE() (*vm.ip++)
 #define READ_CONSTANT() (vm.chunk->constants.values[READ_BYTE()])
-#define BINARY_OP(op) \
-  do { \
-    double b = pop(); \
-    double a = pop(); \
-    push(a op b); \
+#define BINARY_OP(op)                                                          \
+  do {                                                                         \
+    double b = pop();                                                          \
+    double a = pop();                                                          \
+    push(a op b);                                                              \
   } while (false)
 
   for (;;) {
@@ -69,11 +69,11 @@ static InterpretResult run() {
 #undef BINARY_OP
 }
 
-InterpretResult interpret(const char* source) {
+InterpretResult interpret(const char *source) {
   Chunk chunk;
   initChunk(&chunk);
 
-  if(!compile(source, &chunk)) {
+  if (!compile(source, &chunk)) {
     freeChunk(&chunk);
     return INTERPRET_COMPILE_ERROR;
   }

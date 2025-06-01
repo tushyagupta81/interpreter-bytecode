@@ -37,6 +37,14 @@ make run
         - [ ] String interpolation like "dfsdfds ${some code or expression}"
         - [ ] How to overcome the >> like issue in C++ where >> colided with something like <vector<vector>>
         - [ ] contextual keywords - for eg await is a keyword only in a async function
+- Chapter 17
+    - Compiler & Parser
+        - It is based on the Pratt Parser. I need to read more of this chapter. really didnt get it
+        - [ ] Challenges
+            - [x] Explore the stack trace of how complex arithmatic equations walk throught the Pratt Parser
+            - [ ] What are token that can work for both prefix and infix(line TOKEN_MINUS)
+            - [ ] How will you handle "mixfix" operators like the ternary operator ?:
+
 
 ## Testing
 > Coming soon
