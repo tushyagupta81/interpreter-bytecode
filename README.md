@@ -39,11 +39,23 @@ make run
         - [ ] contextual keywords - for eg await is a keyword only in a async function
 - Chapter 17
     - Compiler & Parser
-        - It is based on the Pratt Parser. I need to read more of this chapter. really didnt get it
+        - Pratt Parser
+            - It works with operators and operands and groups together operators and operands by binding power(precedence)
+            - For repeatiable results we assign a little bit higher binding power on one side of the operator. This also helps to define if the operator is left associative or right associative
+            - The parser walks through the tokens and aligns them in a postfix like manner into the chunk.
         - [ ] Challenges
             - [x] Explore the stack trace of how complex arithmatic equations walk throught the Pratt Parser
             - [ ] What are token that can work for both prefix and infix(line TOKEN_MINUS)
             - [ ] How will you handle "mixfix" operators like the ternary operator ?:
+- Chapter 18
+    - Values hold diffrent kinds of values. We use a tagged union to store the values as raw bits and a type enum to store which type of value that Value is
+    - Cappable to handle numbers, bools, nil
+    - Also added support for other operators such as >, <, ==, >=, <=, etc
+    - Using only <, >, ==, ! as the base operators to make the other ones.
+        - Other operators take 2 instructions like ! and < to make >=
+    - [ ] Challenges
+        - [ ] Remove some binary operators like we did for <= etc
+        - [ ] Add more binary operators for ones taking 2 instructions to improve speed and efficiency
 
 
 ## Testing

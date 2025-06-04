@@ -6,7 +6,7 @@ BUILD_DIR=build
 
 SOURCES := $(wildcard $(SRC_DIR)/*.c)
 OBJECTS := $(patsubst $(SRC_DIR)/%.c,$(BUILD_DIR)/%.o,$(SOURCES))
-TARGET = $(BUILD_DIR)/interpreter-bytecode.out
+TARGET = $(BUILD_DIR)/interpreter
 
 all: $(TARGET)
 
