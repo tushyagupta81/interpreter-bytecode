@@ -7,6 +7,8 @@
 
 ## How to run
 ```sh
+git clone https://github.com/tushyagupta81/interpreter-bytecode.git
+cd interpreter-bytecode
 make run
 ```
 
@@ -56,6 +58,16 @@ make run
     - [ ] Challenges
         - [ ] Remove some binary operators like we did for <= etc
         - [ ] Add more binary operators for ones taking 2 instructions to improve speed and efficiency
+- Chapter 19
+    - Representing Strings using an Obj
+    - An Obj is anything stored on the heap
+    - We use the heap here as strings are variable length
+    - Also made a pseudo garbage collector(Only frees all the objects at the end of compilation)
+        - Obj's are made like a linked list so that we can store all the Objs to free later
+    - [ ] Challenges
+        - [ ] We need 2 allocations to make the ObjString and one for the chars itself. Try to lower it using "flexible array members"
+        - [ ] We copy our strings to the heap so that we are sure we can free them. Instead make a Constant String with points to the source code where we know we can't free the string
+        - [ ] What will you do for \<string\> + \<other type\> and what do other languages do
 
 
 ## Testing

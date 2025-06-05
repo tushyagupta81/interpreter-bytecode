@@ -11,6 +11,9 @@ static void repl() {
       printf("\n");
       break;
     }
+    if (memcmp(line, "exit", 4) == 0) {
+      return;
+    }
 
     interpret(line);
   }
