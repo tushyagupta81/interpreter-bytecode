@@ -5,6 +5,7 @@
 #include "debug.h"
 #include "memory.h"
 #include "object.h"
+#include "table.h"
 #include "value.h"
 #include <stdarg.h>
 #include <stdio.h>
@@ -16,9 +17,11 @@ static void resetStack() { vm.stackTop = vm.stack; }
 
 void initVM() { resetStack();
   vm.objects = NULL;
+  initTable(&vm.strings);
 }
 
 void freeVM() {
+  freeTable(&vm.strings);
   freeObjects();
 }
 

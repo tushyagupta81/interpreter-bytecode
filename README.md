@@ -68,6 +68,22 @@ make run
         - [ ] We need 2 allocations to make the ObjString and one for the chars itself. Try to lower it using "flexible array members"
         - [ ] We copy our strings to the heap so that we are sure we can free them. Instead make a Constant String with points to the source code where we know we can't free the string
         - [ ] What will you do for \<string\> + \<other type\> and what do other languages do
+- Chapter 20
+    - Made a custom/hand rolled HashTable
+    - Uses the FNV-1a algorithm for hash function
+    - Using open addressing with linear mapping and tombstones for deletion
+    - Hashmap uses strings as key and Value as value
+    - Hash for the strings in calculated on creation of them as we are already doing a O(n) operation during that time
+    - We intern(internalize) all the strings created in the program into the Hashmap
+    - We also compare keys by
+        1. Length
+        2. Hash
+        3. char by char comparission if earlier conditions pass
+        - This ensures fast == on strings during runtime
+    - [ ] Challenges
+        - [ ] Add key suprrort for other primitive types such as numbers, bools, etc. What sort of complexity does it add if we also need to check for user defined classes and objects
+        - [ ] Look up some hashtable implementations with diffrent algos in them and why those were choosen
+        - [ ] Write a benchmark for our hashmap
 
 
 ## Testing
