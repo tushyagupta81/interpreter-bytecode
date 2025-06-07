@@ -72,6 +72,7 @@ make run
 
 ## Testing
 > Coming soon
+> Copied test files from craftinginterpreters but still need to write to logic to run them
 
 ### Why in C?
 This one is written in C to help me understand memory managment in C, and then understanding why the modern C alternatives are good
