@@ -9,7 +9,7 @@
 ```sh
 git clone https://github.com/tushyagupta81/interpreter-bytecode.git
 cd interpreter-bytecode
-make run
+./run <lox file>
 ```
 
 ## Current Progress
