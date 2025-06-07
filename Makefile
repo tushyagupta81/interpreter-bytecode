@@ -11,7 +11,7 @@ TARGET = $(BUILD_DIR)/interpreter
 all: $(TARGET)
 
 $(BUILD_DIR)/%.o: $(SRC_DIR)/%.c | $(BUILD_DIR)
-	$(CC) $(CFLAGS) -g -c $< -o $@
+	$(CC) $(CFLAGS) -I./include -g -c $< -o $@
 
 $(TARGET): $(OBJECTS)
 	$(CC) $(CFLAGS) -o $@ $^

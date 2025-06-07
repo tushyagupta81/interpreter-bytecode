@@ -2,15 +2,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "include/chunk.h"
-#include "include/compiler.h"
-#include "include/value.h"
+#include "chunk.h"
+#include "compiler.h"
+#include "value.h"
 
 #ifdef DEBUG_PRINT_CODE
-#include "include/debug.h"
+#include "debug.h"
 #endif /* ifdef DEBUG_PRINT_CODE */
 
-#include "include/scanner.h"
+#include "scanner.h"
 
     typedef struct {
   Token current;
