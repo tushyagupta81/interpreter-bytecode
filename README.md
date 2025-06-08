@@ -84,6 +84,14 @@ cd interpreter-bytecode
         - [ ] Add key suprrort for other primitive types such as numbers, bools, etc. What sort of complexity does it add if we also need to check for user defined classes and objects
         - [ ] Look up some hashtable implementations with diffrent algos in them and why those were choosen
         - [ ] Write a benchmark for our hashmap
+- Chapter 21
+    - Global variables using the previously made hashmap
+    - Assignment to variable names and retrival of global variables
+    - [ ] Challenges
+        - [ ] Global variable name is added to the constants list everytime, optimise this approach to not reach the 256 limit
+        - [ ] Global variable lookup is still slow, find a better approch with the same semantics
+        - [ ] In REPL mode if a user uses a global variable that will be declared later it produces an error. Fix this approach and report an error only if that piece of code is ran without the declaration of that global variable
+        - [ ] If we have an unused function with the global variable also not declared we will get no RUNTIME error. We can report these during the compile time
 
 
 ## Testing
