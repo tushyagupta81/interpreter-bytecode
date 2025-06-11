@@ -1,11 +1,14 @@
 # Bytecode Interpreter (CLOX)
+
 > Follows the 2<sup>nd</sup> part the the book [Crafting Interpreters](https://craftinginterpreters.com/chunks-of-bytecode.html)
 
 ## Prerequisite
+
 - Make - to automate the build scripts
 - C complier - set the CC variable in the Makefile to the compiler of your choice
 
 ## How to run
+
 ```sh
 git clone https://github.com/tushyagupta81/interpreter-bytecode.git
 cd interpreter-bytecode
@@ -13,6 +16,7 @@ cd interpreter-bytecode
 ```
 
 ## Current Progress
+
 - Chapter 14
     - Simple instructions like Return
     - Constant values
@@ -92,11 +96,25 @@ cd interpreter-bytecode
         - [ ] Global variable lookup is still slow, find a better approch with the same semantics
         - [ ] In REPL mode if a user uses a global variable that will be declared later it produces an error. Fix this approach and report an error only if that piece of code is ran without the declaration of that global variable
         - [ ] If we have an unused function with the global variable also not declared we will get no RUNTIME error. We can report these during the compile time
-
+- Chapter 22
+    - Local variables
+        - They are stored on the stack itself and not like global variables
+        - They each have a identifier attached to them
+        - They work in levels and on the rightmost/top of the stack we have the highest level of scope
+    - Blocks
+        - We just increase the scope level of the variables
+    - [ ] Challenges
+        - [ ] More efficent approach than linear search for the variable we are looking for. Is the extra compute worth it?
+        - [x] How do other langs handle var a = a;? How will you handle it
+            - This is basically assigning the old value to the new value of same name. Although not allows in lox in the same scope level but it is useful in languages like python where we do multiple levels of cleaning/work on the same variable and instead of naming them seperatly we can just have them all together
+        - [ ] Create constant variables that do not change. Justify your choice
+        - [ ] Extend lox to hold more than 256 variables
 
 ## Testing
+
 > Coming soon
 > Copied test files from craftinginterpreters but still need to write to logic to run them
 
 ### Why in C?
+
 This one is written in C to help me understand memory managment in C, and then understanding why the modern C alternatives are good
