@@ -109,6 +109,15 @@ cd interpreter-bytecode
             - This is basically assigning the old value to the new value of same name. Although not allows in lox in the same scope level but it is useful in languages like python where we do multiple levels of cleaning/work on the same variable and instead of naming them seperatly we can just have them all together
         - [ ] Create constant variables that do not change. Justify your choice
         - [ ] Extend lox to hold more than 256 variables
+- Chapter 23
+    - Control Flow
+        - If else statements
+        - While and For loops
+    - Achived control flow by manupilating the Instruction pointer to the correct jump locations
+    - [ ] Challenges
+        - [ ] Implement the switch statement
+        - [ ] Implement the continue statement
+        - [ ] Create a new type of control flow statement
 
 ## Testing
 
