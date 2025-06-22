@@ -24,11 +24,15 @@ typedef enum {
   OP_GET_GLOBAL,
   OP_SET_GLOBAL,
   OP_GET_LOCAL,
+  OP_CLOSURE,
   OP_SET_LOCAL,
   OP_JUMP_IF_FALSE,
   OP_JUMP,
   OP_LOOP,
   OP_CALL,
+  OP_SET_UPVALUE,
+  OP_GET_UPVALUE,
+  OP_CLOSE_UPVALUE,
 } OpCode;
 
 typedef struct {

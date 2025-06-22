@@ -129,6 +129,19 @@ cd interpreter-bytecode
       - [ ] Check for arity in native functions
       - [ ] Extend native functions to support runtime errors such as passing string into a int parameter
       - [ ] Implement some more native functions. See how practical they are to the language
+- Chapter 25
+  - Lexical scoping
+    - Using the Upvalue implementation from Lua
+    - Using Upvalues to points to values from the outscope and works in a recuresive manner
+    - Upvalues can either be open or closed.
+      - Open Upvalues are values that are still in the stack
+      - Closed Upvalues are the values which have been taken off that stack and put/hoisted into the stack
+        - We have a closed field on the Local struct to store the hoisted value when it gets closed. In this case the loction points to the closed fields instead of a index on the stack
+    - TODO: fix error reporting for missing variables
+    - [ ] Challenges
+      - [ ] Wrap only functions that need upvalues in closure
+      - [ ] How should lox behave in loops. Should there be new variables for each loop or use one variable for each loop. Implement independent variables for loops.
+      - [ ] Write a lox program to mimic a object. Have a constructor, methods and make a add method
 
 ## Testing
 
